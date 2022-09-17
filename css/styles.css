@@ -8,10 +8,12 @@
   --text-secondary-bg-color: #f5f4fa;
   --background-accent-color: #2196f3;
   --footer-addres-color: #ffffff;
+  --second-accent-color: #ffffff;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  color: var(--primary-text-color);
 }
 
 .list {
@@ -72,6 +74,10 @@ body {
   color: var(--accent-color);
 }
 
+.header-link.link.current {
+  color: var(--background-accent-color);
+}
+
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
@@ -101,11 +107,26 @@ body {
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: var(--background-accent-color);
+  cursor: pointer;
 }
 
 /*----------- BENEFITS -----------*/
-.benefits, .feature {
+.benefits,
+.feature {
   background-color: var(--text-background-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .benefits-title {
@@ -128,51 +149,51 @@ body {
 /*----------- FEATURE -----------*/
 
 .feature-title {
-    font-weight: 700;
-font-size: 36px;
-line-height: 1.17;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 
 /*------------- TEAM ----------------*/
 
 .team {
-    background-color: var(--text-secondary-bg-color);
+  background-color: var(--text-secondary-bg-color);
 }
 .team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 .team-title-employee {
-    font-weight: 500;
-font-size: 16px;
-line-height: 1.19;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
 }
 .team-title-text {
-    font-weight: 400;
-font-size: 16px;
-line-height: 1.19;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
 /*------------- FOOTER ------------*/
 .footer {
-background-color: var(--primary-background-color);
+  background-color: var(--primary-background-color);
 }
 
 .footer-logo {
-    font-family: "Raleway";
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -181,7 +202,7 @@ background-color: var(--primary-background-color);
 }
 
 .footer-logo-second {
-    font-weight: 700;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -189,18 +210,82 @@ background-color: var(--primary-background-color);
 }
 
 .footer-addres {
-    font-weight: 400;
-font-size: 14px;
-line-height: 1.5;
-letter-spacing: 0.03em;
-color: var(--footer-addres-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--footer-addres-color);
 }
 
 .footer-mail,
 .footer-tel {
-    font-weight: 400;
-font-size: 14px;
-line-height: 1.5;
-letter-spacing: 0.03em;
-color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-mail:hover,
+.footer-mail:focus {
+  color: var(--accent-color);
+}
+
+.footer-tel:hover,
+.footer-tel:focus {
+  color: var(--accent-color);
+}
+
+.footer-addres:hover,
+.footer-addres:focus {
+  color: var(--accent-color);
+}
+
+/*--------------- PORTFOLIO -------------*/
+
+.main-contant {
+  background-color: var(--text-background-color);
+}
+
+.portfolio-btn .all,
+.portfolio-btn .web,
+.portfolio-btn .app,
+.portfolio-btn .design,
+.portfolio-btn .market {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  background-color: var(--text-secondary-bg-color);
+  cursor: pointer;
+}
+
+.portfolio-btn .all:hover,
+.portfolio-btn .web:hover,
+.portfolio-btn .app:hover,
+.portfolio-btn .design:hover,
+.portfolio-btn .market:hover {
+  color: var(--second-accent-color);
+  background-color: var(--background-accent-color);
+}
+
+.portfolio-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.portfolio-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
