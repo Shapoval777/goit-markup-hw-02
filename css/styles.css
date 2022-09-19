@@ -4,16 +4,17 @@
   --accent-color: #2196f3;
   --primary-background-color: #2f303a;
   --text-background-color: #f5f5f5;
-  --header-background-color: #ffffff;
+  --white-color: #ffffff;
   --text-secondary-bg-color: #f5f4fa;
-  --background-accent-color: #2196f3;
-  --footer-addres-color: #ffffff;
-  --second-accent-color: #ffffff;
+  --black-color: #000000;
+  --focus-btn-color: #188CE8;
+  --tel-mail-color: rgba(255, 255, 255, 0.6);
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
+  background-color: var(--white-color);
 }
 
 .list {
@@ -25,10 +26,6 @@ body {
 }
 
 /*-----------HEADER-----------*/
-
-.header {
-  background-color: var(--header-background-color);
-}
 
 .header-logo {
   font-family: "Raleway";
@@ -44,10 +41,10 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--black-color);
 }
 
-.header-item {
+.header-item .header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -75,7 +72,7 @@ body {
 }
 
 .header-link.link.current {
-  color: var(--background-accent-color);
+  color: var(--accent-color);
 }
 
 .header-link:hover,
@@ -96,7 +93,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 .hero-btn {
@@ -105,16 +102,17 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: var(--background-accent-color);
+  color: var(--white-color);
+  background-color: var(--accent-color);
   cursor: pointer;
 }
 
-/*----------- BENEFITS -----------*/
-.benefits,
-.feature {
-  background-color: var(--text-background-color);
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--focus-btn-color);
 }
+
+/*----------- BENEFITS -----------*/
 
 .visually-hidden {
   position: absolute;
@@ -187,6 +185,10 @@ body {
   color: var(--primary-text-color);
 }
 
+.team-list {
+  background-color: var(--white-color);
+}
+
 /*------------- FOOTER ------------*/
 .footer {
   background-color: var(--primary-background-color);
@@ -206,7 +208,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--white-color);
 }
 
 .footer-addres {
@@ -215,7 +217,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: var(--footer-addres-color);
+  color: var(--white-color);
 }
 
 .footer-mail,
@@ -225,7 +227,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--tel-mail-color);
 }
 
 .footer-mail:hover,
@@ -246,7 +248,7 @@ body {
 /*--------------- PORTFOLIO -------------*/
 
 .main-contant {
-  background-color: var(--text-background-color);
+  background-color: var(--white-color);
 }
 
 .portfolio-btn .all,
@@ -265,13 +267,18 @@ body {
   cursor: pointer;
 }
 
-.portfolio-btn .all:hover,
-.portfolio-btn .web:hover,
-.portfolio-btn .app:hover,
-.portfolio-btn .design:hover,
-.portfolio-btn .market:hover {
-  color: var(--second-accent-color);
-  background-color: var(--background-accent-color);
+ .all:hover,
+ .all:focus,
+ .web:hover,
+ .web:focus,
+ .app:hover,
+ .app:focus,
+ .design:hover,
+ .design:focus,
+ .market:hover,
+ .market:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
 }
 
 .portfolio-title {
